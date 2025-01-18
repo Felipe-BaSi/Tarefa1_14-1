@@ -3,6 +3,7 @@
 ## Circuito no Wokwi
 
 No circuito, foram empregados, um teclado matricial 4x4, LED RGB, um buzzer e um microcontrolador Raspberry Pi Pico W.
+![image](https://github.com/user-attachments/assets/a94ed424-d0b3-41eb-88fd-ca4adbceb6d4)
 
 ## Funcionamento
 

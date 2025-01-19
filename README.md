@@ -10,7 +10,9 @@ No circuito, foram empregados, um teclado matricial 4x4, LED RGB, um buzzer e um
 Ao pressionar determinadas teclas do teclado matricial algumas funções são acionadas. Podemos listar as seguintes:
 
 - Tecla "A" : Liga e desliga o LED Azul
-- Tecla "B" : Liga e desliga o Buzzer
+- Tecla "B" : Liga e desliga o LED Verde
+- Tecla "C" : Liga e desliga o LED Vermelho
+- Tecla "B" : Liga e desliga o BUZZER
 
 ## Ferramentas Utilizadas no Desenvolvimento
 

@@ -2,6 +2,10 @@
 #include "pico/stdlib.h"
 
 #define led_pin_blue 20
+#define led_pin_red 18
+#define led_pin_green 19
+#define buzzer_pin 26
+
 
 const uint rows[4] = {1, 2, 3, 4};
 const uint columns[4] = {5, 6, 7, 8};
@@ -52,6 +56,8 @@ int main() {
 
     gpio_init(led_pin_blue);
     gpio_set_dir(led_pin_blue, GPIO_OUT);
+    gpio_init(buzzer_pin);
+    gpio_set_dir(buzzer_pin, GPIO_OUT);
 
     char caracter_press;
 
@@ -67,7 +73,7 @@ int main() {
 
         switch(caracter_press){
 
-          case 'A':
+          case 'A': // Ligar led azul
 
               if(gpio_get(led_pin_blue) == 0){
 
@@ -78,6 +84,19 @@ int main() {
               }
               
               break;
+
+          case 'B': // Ligar Buzzer
+
+              if(gpio_get(buzzer_pin) == 0){
+
+                gpio_put(buzzer_pin, 1);
+
+              } else {
+                gpio_put(buzzer_pin, 0);
+              }
+              
+              break;
+
         }
 
     busy_wait_us(100);

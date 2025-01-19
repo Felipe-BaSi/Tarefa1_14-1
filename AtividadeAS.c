@@ -56,6 +56,13 @@ int main() {
 
     gpio_init(led_pin_blue);
     gpio_set_dir(led_pin_blue, GPIO_OUT);
+
+    gpio_init(led_pin_green);
+    gpio_set_dir(led_pin_green, GPIO_OUT);
+
+    gpio_init(led_pin_red);
+    gpio_set_dir(led_pin_red, GPIO_OUT);
+
     gpio_init(buzzer_pin);
     gpio_set_dir(buzzer_pin, GPIO_OUT);
 
@@ -85,7 +92,30 @@ int main() {
               
               break;
 
-          case 'B': // Ligar Buzzer
+          case 'B': //Liga led verde
+
+                if(gpio_get(led_pin_green) == 0){
+
+                    gpio_put(led_pin_green, 1);
+
+                } else {
+                    gpio_put(led_pin_green, 0);
+                }
+              
+              break;
+          case 'C': //Liga led vermelho
+
+                if(gpio_get(led_pin_red) == 0){
+
+                    gpio_put(led_pin_red, 1);
+
+                } else {
+                    gpio_put(led_pin_red, 0);
+                }
+              
+              break;
+
+          case 'D': // Ligar Buzzer
 
               if(gpio_get(buzzer_pin) == 0){
 
